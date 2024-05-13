@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><input id="todo-input" /><button id="todo-button">Submit</button></div>
+    <ul id="todo-list1"></ul>
+    <ul id="todo-list2"></ul>
+  </body>
+  <script>
+    const state = JSON.parse(
+      localStorage.getItem("state") || {
+        todos: [],
+      }
+    );
+    renderAll();
+
+    function renderAll() {
+      renderList1();
+      renderList2();
+    }
+
+    document.querySelector("#button").addEventListener("click", () => {
+      // Update state
+      const inputText = document.querySelector("#input").value;
+      state.todos.push(inputText);
+      localStorage.setItem("state", JSON.stringify(state));
+      renderList1();
+    });
+
+    function renderList1() {
+      const todoLIs = state.todos.map((t) => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        return li;
+      });
+      const parentList = document.querySelector("#todo-list1");
+      parentList.replaceChildren(...todoLIs);
+    }
+    function renderList2() {
+      const todoLIs = state.todos.map((t) => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        return li;
+      });
+      const parentList = document.querySelector("#todo-list2");
+      parentList.replaceChildren(...todoLIs);
+    }
+  </script>
+</html>

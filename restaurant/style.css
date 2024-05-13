@@ -1,0 +1,410 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 100px;
+  background-image: url(./img/halloween-5596921_1280.jpg);
+  background-size: cover;
+}
+
+#surpriseButton {
+  background-color: #ff7a00;
+  color: white;
+  padding: 15px;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#surpriseButton:hover {
+  background-color: #ff7a00;
+  transform: scale(1.1);
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.01);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+.resetButton {
+  position: absolute;
+  top: 115px;
+  right: 100px;
+  border-radius: 15px;
+  background-color: #ff7a00;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #ffefcf;
+  background-color: #d44000;
+  height: 100px;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+header h1 {
+  font-family: "Eater", serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ff7a00;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 6px;
+}
+
+#menulist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menulist li {
+  padding: 10px;
+  border-bottom: 1px solid #ffefcf;
+}
+
+#cart {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#cart li {
+  padding: 10px;
+  border: 1px solid #ffefcf;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#cart button {
+  cursor: pointer;
+  background-color: #f44336;
+  color: #ffefcf;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#menulist button {
+  cursor: pointer;
+  background-color: #f44336;
+  color: #ffefcf;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#menulist li {
+  padding: 10px;
+  border: 1px solid #ffefcf;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightSide,
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-left: 1px solid grey;
+  padding: 25px;
+  background-color: #ffefcf;
+  border-radius: 10px;
+  min-width: 80vh;
+  min-height: 25vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  gap: 8px;
+  margin: 20px;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-left: 1px solid grey;
+  padding: 10px;
+  background-color: #ffefcf;
+  border-radius: 10px;
+  min-width: 60vh;
+  min-height: 25vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.paymentSection {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#inputFieldDishName {
+  margin-right: 10px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  min-width: 15em;
+  border-radius: 5px;
+}
+
+#inputFieldDishPrice {
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  max-width: 8em;
+  border-radius: 5px;
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+}
+
+#tableSelect,
+#dishSelect {
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  margin-right: 20px;
+}
+
+.listLeft,
+.listRight {
+  background-color: #d44000;
+  display: flex;
+  flex-direction: column;
+  color: #ffefcf;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 220px;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+#calcSelect {
+  width: 80px;
+  gap: 10px;
+}
+.total label {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+}
+
+#totalUl li {
+  background-color: #ffefcf;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  gap: 10px;
+  padding: 5px;
+  content: "€";
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #d44000;
+  color: #ffefcf;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#payButton {
+  margin-left: 10px;
+}
+
+button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.listedItems {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset;
+}
+
+#table {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+  background-color: #d44000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: "Nosifer", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 15px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style-type: none;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#calcSelect {
+  border-radius: 5px;
+  margin-right: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  min-width: 6em;
+  padding: 10px;
+}
+
+/* LIST RIGHT SCROLLBAR
+
+/* The entire scrollbar */
+.listRight::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* The track (progress bar) of the scrollbar */
+.listRight::-webkit-scrollbar-track {
+  background: #864000;
+  border-radius: 4px;
+  padding-right: 50px;
+}
+/* The handle (movable part) of the scrollbar */
+
+.listRight::-webkit-scrollbar-thumb {
+  background: #ff7a00;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.listRight::-webkit-scrollbar-thumb:hover {
+  background: #ff7a00;
+}
+
+/* LIST LEFT SCROLL BAR
+
+/* The entire scrollbar */
+.listLeft::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* The track (progress bar) of the scrollbar */
+.listLeft::-webkit-scrollbar-track {
+  background: #864000;
+  border-radius: 4px;
+  padding-right: 50px;
+}
+/* The handle (movable part) of the scrollbar */
+
+.listLeft::-webkit-scrollbar-thumb {
+  background: #ff7a00;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.listLeft::-webkit-scrollbar-thumb:hover {
+  background: #ff7a00;
+}
+
+@media screen and (max-width: 800px) {
+  header h1 {
+    font-family: "Eater", serif;
+    font-size: 14px;
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ff7a00;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #menulist {
+    min-width: 10vh;
+    min-height: 10vh;
+    background-color: #d44000;
+  }
+
+  .leftSide {
+    min-width: 10vh;
+    min-height: 5vh;
+    flex-direction: column;
+  }
+  .rightSide {
+    min-width: 10vh;
+    min-height: 5vh;
+  }
+  #cart #menulist {
+    min-width: 10vh;
+    min-height: 10vh;
+    background-color: #d44000;
+    border-radius: 10px;
+  }
+}

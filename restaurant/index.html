@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!--ICONS buttons-->
+  </head>
+  <body>
+    <div id="content">
+      <button id="surpriseButton"><i class="fa-solid fa-ghost"></i></button>
+      <header>
+        <h1>Manage your orders here</h1>
+      </header>
+      <main>
+        <section>
+          <div class="leftSide">
+            <div>
+              <input
+                id="inputFieldDishName"
+                placeholder="Name of the Dish"
+                type="text"
+              />
+              <input
+                id="inputFieldDishPrice"
+                type="number"
+                placeholder="€ Price"
+              />
+              <button id="addDish">
+                <i class="fa-solid fa-ghost"></i> Add dish
+              </button>
+            </div>
+            <div class="listLeft">
+              <ul id="menulist">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rightSide">
+            <div>
+              <label for="tableSelect">Choose a table:</label>
+              <select id="tableSelect"></select>
+
+              <label for="dishSelect">Choose a dish:</label>
+              <select id="dishSelect"></select>
+
+              <button id="addOrder">
+                <i class="fa-solid fa-ghost"></i> Order
+              </button>
+            </div>
+
+            <div class="listRight">
+              <ul id="cart">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="paymentSection">
+          <div class="total">
+            <div>
+              <select
+                class="paymentDiv"
+                name="calcSelect"
+                id="calcSelect"
+              ></select>
+              <button class="paymentDiv" id="calcButton">
+                <i class="fa-solid fa-ghost"></i> Calculate
+              </button>
+              <button class="paymentDiv" id="payButton">
+                <i class="fa-solid fa-ghost"></i> Payment
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="details">
+          <ul>
+            <li><i class="fa-solid fa-phone"></i> +123 1234567890</li>
+            <li>
+              <i class="fa-solid fa-envelope"></i> Restaurant@Restaurant.com
+            </li>
+            <li><i class="fa-solid fa-compass"></i> Somewhere, Europe</li>
+          </ul>
+        </div>
+        <div class="technicalSupport">
+          <p>
+            If you have any technical difficulties please <br />
+            contact us on 0800 300 300
+          </p>
+        </div>
+        <div class="socialMedia">
+          <h3>Our Social Media</h3>
+          <ul>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b07491e6c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
